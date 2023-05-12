@@ -6,7 +6,16 @@ function App() {
   return (
     <div className='bg-cream h-screen flex items-center justify-center'>
       <div id='card' className='w-[375px] bg-white rounded-lg'>
-        <img src={MobileImage} alt='Mobile Image' className='rounded-t-lg' />
+        <img
+          src={DesktopImage}
+          alt='Desktop Image'
+          className='rounded-t-lg hidden sm:block'
+        />
+        <img
+          src={MobileImage}
+          alt='Mobile Image'
+          className='rounded-t-lg block sm:hidden'
+        />
 
         <div
           id='content'
