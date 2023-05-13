@@ -4,22 +4,27 @@ import DesktopImage from './assets/images/image-product-desktop.jpg'
 
 function App() {
   return (
-    <div className='bg-cream h-screen flex items-center justify-center'>
-      <div id='card' className='w-[375px] bg-white rounded-lg'>
-        <img
-          src={DesktopImage}
-          alt='Desktop Image'
-          className='rounded-t-lg hidden sm:block'
-        />
-        <img
-          src={MobileImage}
-          alt='Mobile Image'
-          className='rounded-t-lg block sm:hidden'
-        />
+    <div className='bg-cream h-screen w-screen grid place-items-center'>
+      <div
+        id='card'
+        className='w-[375px] sm:w-96 sm:h-96 bg-white rounded-lg flex flex-col sm:flex-row items-center justify-center'
+      >
+        <div id='image' className='sm:w-1/2'>
+          <img
+            src={DesktopImage}
+            alt='Desktop Image'
+            className='rounded-t-lg sm:rounded-tr-none sm:rounded-l-lg hidden sm:block sm:h-full'
+          />
+          <img
+            src={MobileImage}
+            alt='Mobile Image'
+            className='rounded-t-lg sm:rounded-lg block sm:hidden'
+          />
+        </div>
 
         <div
           id='content'
-          className='font-montserrat font-medium m-4 text-very-dark-blue'
+          className='sm:w-1/2 font-montserrat font-medium m-4 sm:m-8 text-very-dark-blue'
         >
           <div id='header'>
             <h2 className='uppercase tracking-[7px] text-dark-grayish-blue text-sm mb-2'>
