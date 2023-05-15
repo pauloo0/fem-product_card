@@ -5,20 +5,20 @@ import DesktopImage from './assets/images/image-product-desktop.jpg'
 function App() {
   return (
     <div className='bg-cream h-screen w-screen grid place-items-center'>
-      <div
+      <main
         id='card'
-        className='w-[375px] sm:w-96 sm:h-96 bg-white rounded-lg flex flex-col sm:flex-row items-center justify-center'
+        className='sm:w-1/2 sm:h-[375px] rounded-lg bg-white flex flex-row justify-center items-center'
       >
         <div id='image' className='sm:w-1/2'>
           <img
             src={DesktopImage}
             alt='Desktop Image'
-            className='rounded-t-lg sm:rounded-tr-none sm:rounded-l-lg hidden sm:block sm:h-full'
+            className='hidden sm:block sm:rounded-l-lg sm:w-full'
           />
           <img
             src={MobileImage}
             alt='Mobile Image'
-            className='rounded-t-lg sm:rounded-lg block sm:hidden'
+            className='block sm:hidden'
           />
         </div>
 
@@ -28,7 +28,7 @@ function App() {
         >
           <div id='header'>
             <h2 className='uppercase tracking-[7px] text-dark-grayish-blue text-sm mb-2'>
-              Perfume
+              perfume
             </h2>
             <h1 className='font-fraunces text-3xl'>
               Gabrielle Essence Eau De Parfum
@@ -60,7 +60,7 @@ function App() {
             Add to Cart
           </button>
         </div>
-      </div>
+      </main>
     </div>
   )
 }
