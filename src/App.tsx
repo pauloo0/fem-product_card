@@ -4,43 +4,43 @@ import DesktopImage from './assets/images/image-product-desktop.jpg'
 
 function App() {
   return (
-    <div className='bg-cream h-screen w-screen grid place-items-center'>
-      <div
+    <div className='bg-cream min-h-screen w-screen grid place-items-center'>
+      <main
         id='card'
-        className='w-[375px] sm:w-96 sm:h-96 bg-white rounded-lg flex flex-col sm:flex-row items-center justify-center'
+        className='grid grid-cols-1 sm:grid-cols-2 rounded-lg bg-white w-[375px] sm:w-[550px]'
       >
-        <div id='image' className='sm:w-1/2'>
+        <div id='image' className=''>
           <img
             src={DesktopImage}
             alt='Desktop Image'
-            className='rounded-t-lg sm:rounded-tr-none sm:rounded-l-lg hidden sm:block sm:h-full'
+            className='hidden sm:block sm:rounded-l-lg w:full'
           />
           <img
             src={MobileImage}
             alt='Mobile Image'
-            className='rounded-t-lg sm:rounded-lg block sm:hidden'
+            className='block sm:hidden rounded-t-lg'
           />
         </div>
 
         <div
           id='content'
-          className='sm:w-1/2 font-montserrat font-medium m-4 sm:m-8 text-very-dark-blue'
+          className='font-montserrat font-medium m-6 text-very-dark-blue'
         >
           <div id='header'>
-            <h2 className='uppercase tracking-[7px] text-dark-grayish-blue text-sm mb-2'>
-              Perfume
+            <h2 className='uppercase tracking-[7px] text-dark-grayish-blue text-xs mb-3'>
+              perfume
             </h2>
             <h1 className='font-fraunces text-3xl'>
               Gabrielle Essence Eau De Parfum
             </h1>
           </div>
 
-          <p className='text-dark-grayish-blue text-sm my-4'>
+          <p className='text-dark-grayish-blue text-sm my-5'>
             A floral, solar and voluptuous interpretation composed by Olivier
             Polge, Perfumer-Creator for the House of CHANEL.
           </p>
 
-          <div id='price' className='my-4 flex justify-start items-center'>
+          <div id='price' className='my-5 flex justify-start items-center'>
             <h1 className='font-fraunces text-3xl text-dark-cyan mr-4'>
               $149.99
             </h1>
@@ -60,7 +60,7 @@ function App() {
             Add to Cart
           </button>
         </div>
-      </div>
+      </main>
     </div>
   )
 }
